@@ -1,8 +1,9 @@
 import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
-
+import TopMenu from '@/components/TopMenu'
 const inter = Inter({ subsets: ['latin'] })
+import '@fortawesome/fontawesome-free/css/all.min.css';
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -16,7 +17,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <TopMenu/>
+        {children}
+      </body>
     </html>
   )
 }
